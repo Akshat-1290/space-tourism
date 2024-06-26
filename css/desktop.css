@@ -1,23 +1,63 @@
-@media only screen and (min-width:1280px){
-    #navbar{
-        margin-top: 2rem;
-    }
-    nav ul {
-      padding-right: 15rem;
-      height: 10rem;
-      align-items: center;
-      gap:3rem;
-    }
-    nav ul li{
-        width: 10vw;
-        display: flex;
-        justify-content: center;
-    }
-    nav ul li a{
-        font-size: 1.4vw;
-    }
-    .logo img{
-        height: 3vw;
-    }
+@media only screen and (min-width: 992px) {
+  /* Home Page CSS  */
+  .home-content {
+    display: flex;
+    justify-content: center;
+    gap: 17rem;
+  }
+  .explore-btn {
+    transition: box-shadow 400ms ease-out;
+  }
+  .explore-btn:hover {
+    box-shadow: 0 0 0 5rem #bbbcc0ce;
+  }
+}
 
+@media only screen and (min-width: 1280px) {
+  /* Navbar CSS  */
+  #navbar {
+    margin-top: 2rem;
+  }
+  nav ul {
+    padding-right: 15rem;
+    height: 10rem;
+    align-items: center;
+    gap: 3rem;
+  }
+  nav ul li {
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li a {
+    font-size: 1.4vw;
+  }
+  .logo img {
+    height: 3vw;
+  }
+
+  /* Home Page CSS  */
+  #home-container {
+    margin: 0;
+  }
+  .home-content {
+    gap: 40rem;
+    padding: 10rem;
+  }
+  .container-1 h2 {
+    font-size: clamp(3rem, 2.5vw, 4rem);
+  }
+  .container-1 h1 {
+    font-size: clamp(17rem, 12vw, 21rem);
+  }
+  .container-1 p {
+    font-size: 1.3vw;
+    max-width: 80rem;
+  }
+  .explore-btn {
+    width: clamp(25rem, 17vw, 28rem);
+    height: clamp(25rem, 17vw, 28rem);
+    font-size: 3rem;
+    margin-right: 2rem;
+  }
 }

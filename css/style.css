@@ -91,7 +91,7 @@ nav ul li:hover {
   color: var(--light-color);
   font-weight: lighter;
   letter-spacing: 0.3rem;
-  font-size: clamp(1.5rem, 5vw, 40rem);
+  font-size: clamp(1.5rem, 5vw, 3.5rem);
 }
 .container-1 p {
   max-width: 48rem;
