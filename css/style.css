@@ -102,3 +102,23 @@ nav ul li:hover {
   color: var(--light-color);
   font-size: clamp(1.5rem, 3vw, 1.8rem);
 }
+.container-2 {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+.explore-btn {
+  background-color: #fff;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--secondary-font);
+  color: #000;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+}
