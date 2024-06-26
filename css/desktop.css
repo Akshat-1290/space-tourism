@@ -55,8 +55,8 @@
     max-width: 80rem;
   }
   .explore-btn {
-    width: clamp(25rem, 17vw, 28rem);
-    height: clamp(25rem, 17vw, 28rem);
+    width: clamp(28rem, 19vw, 34rem);
+    height: clamp(28rem, 19vw, 34rem);
     font-size: 3rem;
     margin-right: 2rem;
   }
