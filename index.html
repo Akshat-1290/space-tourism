@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Space Tourism</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tablet.css" />
+    <link rel="stylesheet" href="css/desktop.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,16 +24,19 @@
       @media only screen and (max-width: 768px) {
         body {
           background: url(assets/home/background-home-mobile.jpg);
+          background-size: cover;
         }
       }
       @media only screen and (min-width: 768px) {
         body {
           background: url(assets/home/background-home-tablet.jpg);
+          background-size: cover;
         }
       }
       @media only screen and (min-width: 1280px) {
         body {
-          background: url(assets/home/background-home-tablet.jpg);
+          background: url(assets/home/background-home-desktop.jpg);
+          background-size: cover;
         }
       }
     </style>
@@ -44,10 +49,16 @@
             <img src="assets/shared/logo.svg" alt="Website Logo" />
           </div>
           <div>
-            <img class="nav-toggler" src="assets/shared/icon-hamburger.svg" alt="Hamburger Icon" />
+            <img
+              class="nav-toggler"
+              src="assets/shared/icon-hamburger.svg"
+              alt="Hamburger Icon"
+            />
           </div>
           <ul class="nav-links">
-            <li class="home-nav-btn nav-active"><a href="index.html">00 Home</a></li>
+            <li class="home-nav-btn nav-active">
+              <a href="index.html">00 Home</a>
+            </li>
             <li class="destination-nav-btn">
               <a href="destination.html">01 Destination</a>
             </li>
