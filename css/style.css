@@ -1,17 +1,59 @@
 /* CSS Reset  */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%; /* 1rem = 10px*/
+  font-size: 62.5%; /* 1rem = 10px*/
+}
+
+body {
+  background-size: cover;
+  height: 100vh;
 }
 
 /* CSS Variables */
 :root {
-    --primary-font : "Barlow Condensed", sans-serif;
-    --secondary-font: "Bellefair", serif;
+  --primary-font: "Barlow Condensed", sans-serif;
+  --secondary-font: "Bellefair", serif;
+}
+
+/* Navbar CSS */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem;
+  position: relative;
+  height: 9rem;
+}
+.logo img {
+  height: 3.6rem;
+}
+.nav-toggler img {
+  height: 2rem;
+}
+nav ul {
+  position: absolute;
+  top: 8rem;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+}
+nav ul li {
+  padding: 3rem;
+  padding-right: 5rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: var(--primary-font);
+  font-size: 2.3rem;
 }
