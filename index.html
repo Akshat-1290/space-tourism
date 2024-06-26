@@ -17,8 +17,44 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="assets/favicon-32x32.png" />
+    <style>
+      @media only screen and (max-width: 768px) {
+        body {
+          background: url(assets/home/background-home-mobile.jpg);
+          background-size: cover;
+          height: 100vh;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        body {
+          background: url(assets/home/background-home-tablet.jpg);
+          background-size: cover;
+          height: 100vh;
+        }
+      }
+      @media only screen and (min-width: 1280px) {
+        body {
+          background: url(assets/home/background-home-tablet.jpg);
+          background-size: cover;
+          height: 100vh;
+        }
+      }
+    </style>
   </head>
   <body>
+    <header>
+      <section id="navbar">
+        <nav>
+          <div class="logo">
+            <img src="assets/shared/logo.svg" alt="Website Logo" />
+          </div>
+          <div class="nav-toggler">
+            <img src="assets/shared/icon-hamburger.svg" alt="Hamburger Icon" />
+          </div>
+        </nav>
+      </section>
+    </header>
+
     <script src="js/index.js"></script>
   </body>
 </html>
