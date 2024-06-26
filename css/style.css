@@ -10,11 +10,11 @@ html {
   font-size: 62.5%; /* 1rem = 10px*/
 }
 
-
 /* CSS Variables */
 :root {
   --primary-font: "Barlow Condensed", sans-serif;
   --secondary-font: "Bellefair", serif;
+  --light-color: #d0d6f9;
 }
 
 /* Navbar CSS */
@@ -42,12 +42,13 @@ nav ul {
   gap: 2rem;
   background-color: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
- transform: scale(0);
- transition: 0.5s;
+  transform: scale(0);
+  transition: 0.5s;
 }
 nav ul li {
   padding: 3rem;
   padding-right: 5rem;
+  text-transform: uppercase;
 }
 nav ul li a {
   text-decoration: none;
@@ -61,6 +62,43 @@ nav ul li:hover {
 .nav-active {
   border-bottom: 2px solid white;
 }
-.nav-link-active{
-    transform: scale(1);
+.nav-link-active {
+  transform: scale(1);
+}
+
+/* Home Page CSS  */
+
+#home-container {
+  margin-top: 3rem;
+  color: white;
+  font-family: var(--primary-font);
+}
+.container-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.container-1 h1 {
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  font-size: 8rem;
+  font-size: clamp(6rem, 17vw, 8rem);
+}
+.container-1 h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--light-color);
+  font-weight: lighter;
+  letter-spacing: 0.3rem;
+  font-size: clamp(1.5rem, 5vw, 40rem);
+}
+.container-1 p {
+  max-width: 48rem;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0 2rem;
+  line-height: 1.6;
+  color: var(--light-color);
+  font-size: clamp(1.5rem, 3vw, 1.8rem);
 }
