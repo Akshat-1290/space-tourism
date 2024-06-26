@@ -1,0 +1,23 @@
+@media only screen and (min-width:1280px){
+    #navbar{
+        margin-top: 2rem;
+    }
+    nav ul {
+      padding-right: 15rem;
+      height: 10rem;
+      align-items: center;
+      gap:3rem;
+    }
+    nav ul li{
+        width: 9vw;
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li a{
+        font-size: 1.4vw;
+    }
+    .logo img{
+        height: 3vw;
+    }
+
+}

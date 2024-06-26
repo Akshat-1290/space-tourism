@@ -1,0 +1,24 @@
+@media only screen and (min-width:768px){
+    .nav-toggler{
+        display: none;
+    }
+    nav{
+        padding-right: 1rem;
+        padding-left: 4rem;
+    }
+    nav ul{
+        padding:0 4rem;
+        position: static;
+        transform: scale(1);
+        flex-direction: row;
+        background:transparent;
+        gap: 3rem;
+    }
+    nav ul li{
+        padding:3rem 0;
+    }
+    nav ul li a{
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+    }
+}
