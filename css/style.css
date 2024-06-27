@@ -125,3 +125,29 @@ nav ul li:hover {
   text-decoration: none;
   letter-spacing: 0.2rem;
 }
+
+/* Destination Page CSS  */
+#dest-container {
+  color: white;
+  margin-top: 3rem;
+}
+.planet-visuals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  font-family: var(--primary-font);
+}
+.planet-visuals h2 {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: lighter;
+  letter-spacing: 0.1rem;
+}
+.planet-visuals .index {
+  margin-right: 1rem;
+  color: var(--light-color);
+}
+.planet-image{
+  height: 19rem;
+}
