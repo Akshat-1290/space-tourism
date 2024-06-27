@@ -46,8 +46,6 @@ nav ul {
   transition: 0.5s;
 }
 nav ul li {
-  padding: 3rem;
-  padding-right: 5rem;
   text-transform: uppercase;
 }
 nav ul li a {
@@ -55,6 +53,11 @@ nav ul li a {
   color: white;
   font-family: var(--primary-font);
   font-size: 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 8rem;
 }
 nav ul li:hover {
   border-bottom: 2px solid white;
@@ -103,7 +106,7 @@ nav ul li:hover {
   font-size: clamp(1.5rem, 3vw, 1.8rem);
 }
 .container-2 {
-  margin-top: 5rem;
+  margin-top: 8rem;
   display: flex;
   justify-content: center;
 }

@@ -25,12 +25,14 @@
     gap: 3rem;
   }
   nav ul li {
+    padding: 0;
     width: 10vw;
     display: flex;
     justify-content: center;
   }
   nav ul li a {
     font-size: 1.4vw;
+    display: flex;
   }
   .logo img {
     height: 3vw;
