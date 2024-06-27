@@ -141,7 +141,7 @@ nav ul li:hover {
 }
 .planet-visuals h3 {
   color: white;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
   font-weight: lighter;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
@@ -151,7 +151,7 @@ nav ul li:hover {
   color: var(--light-color);
 }
 .planet-image {
-  height: 19rem;
+  height: clamp(19rem , 40vw , 23rem);
 }
 .planet-details {
   display: flex;
@@ -167,13 +167,13 @@ nav ul li:hover {
 }
 .planet-list li {
   font-family: var(--primary-font);
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 4vw, 1.8rem);
   text-transform: uppercase;
   letter-spacing: 0.23rem;
   padding: 0 1rem;
   color: var(--light-color);
 }
-.active-planet{
+.active-planet {
   border-bottom: 2px solid #fff;
 }
 .planet-name {
@@ -193,23 +193,26 @@ nav ul li:hover {
   color: var(--light-color);
   font-size: clamp(1.5rem, 3vw, 1.8rem);
 }
-.seperator{
+.seperator {
   width: 80vw;
   border-top: 1px solid #ffffff45;
 }
-.planet-info{
- text-align: center;
- font-weight: lighter;
- text-transform: uppercase;
+.planet-info {
+  text-align: center;
+  font-weight: lighter;
+  text-transform: uppercase;
 }
-.planet-info p:nth-child(1){
+.planet-info p:nth-child(1) {
   font-family: var(--primary-font);
   font-size: 1.5rem;
   margin-bottom: 1rem;
   letter-spacing: 0.2rem;
 }
-.planet-info p:nth-child(2){
+.planet-info p:nth-child(2) {
   font-family: var(--secondary-font);
   font-size: 2.5rem;
   letter-spacing: 0.15rem;
+}
+.travel-time{
+  margin-top: 2rem;
 }

@@ -11,6 +11,27 @@
   .explore-btn:hover {
     box-shadow: 0 0 0 5rem #bbbcc0ce;
   }
+
+  /* Destination Page CSS  */
+
+  .dest-content {
+    display: flex;
+    justify-content: center;
+    gap: clamp(10rem, 13vw, 25rem);
+  }
+  .planet-visuals {
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .planet-image {
+    height: 30rem;
+  }
+  hr {
+    width: 80% !important;
+  }
+  .planet-list li{
+    cursor: pointer;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -61,5 +82,36 @@
     height: clamp(28rem, 19vw, 34rem);
     font-size: 3rem;
     margin-right: 2rem;
+  }
+
+  /* Destination Page CSS  */
+  .dest-content {
+    margin-top: 7rem;
+  }
+  .planet-visuals h3 {
+    font-size: 2.7rem;
+  }
+  .planet-image {
+    height: 40rem;
+  }
+  .planet-details {
+    align-items: flex-start;
+  }
+  .planet-name{
+    font-size: 10rem;
+  }
+  .planet-desc {
+    text-align: start;
+    padding: 0;
+    font-size: 1.8rem;
+    letter-spacing: 0.15rem;
+  }
+  .info {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .travel-time {
+    margin: 0;
   }
 }
