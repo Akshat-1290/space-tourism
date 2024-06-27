@@ -19,14 +19,14 @@ navContainer.insertAdjacentHTML(
             />
           </div>
           <ul class="nav-links">
-            <li class="home-nav-btn nav-active">
+            <li class="home-nav">
               <a href="index.html">00 Home</a>
             </li>
-            <li class="destination-nav-btn">
+            <li class="destination-nav">
               <a href="destination.html">01 Destination</a>
             </li>
-            <li class="crew-nav-btn"><a href="crew.html">02 Crew</a></li>
-            <li class="technology-nav-btn">
+            <li class="crew-nav"><a href="crew.html">02 Crew</a></li>
+            <li class="technology-nav">
               <a href="technology.html">03 Technology</a>
             </li>
           </ul>
@@ -34,6 +34,8 @@ navContainer.insertAdjacentHTML(
       </section>
   `
 );
+const activePage = navContainer.dataset.activepage;
+document.querySelector(`.${activePage}-nav`).classList.add("nav-active");
 
 const navToggler = document.querySelector(".nav-toggler");
 const navLinks = document.querySelector(".nav-links");
