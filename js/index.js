@@ -49,3 +49,44 @@ const toggle = () => {
 };
 
 navToggler.addEventListener("click", toggle);
+
+// Destination Page JS
+const planetImage = document.querySelector(".planet-image");
+const planetName = document.querySelector(".planet-name");
+const planetDesc = document.querySelector(".planet-desc");
+const planetDistance = document.querySelector(".planet-distance");
+const planetTravelTime = document.querySelector(".planet-travel-time");
+const planetList = document.querySelectorAll(".planet-list li");
+
+const getPlanetData = async (planet) => {
+  const response = await fetch(`data/destination.json`);
+  const data = await response.json();
+  return data.destinations.find(
+    (item) => item.name.toLowerCase() === planet.toLowerCase()
+  );
+};
+
+const insertPlanetData = (data) => {
+  planetImage.src = data.image;
+  planetName.textContent = data.name;
+  planetDesc.textContent = data.description;
+  planetDistance.textContent = data.distance;
+  planetTravelTime.textContent = data.travelTime;
+};
+
+const changeActivePlanet = (name) => {
+  planetList.forEach((e) => {
+    e.dataset.planet === name
+      ? e.classList.add("active-planet")
+      : e.classList.remove("active-planet");
+  });
+};
+
+planetList.forEach((e) => {
+  e.addEventListener("click", () => {
+    getPlanetData(e.dataset.planet).then((data) => {
+      insertPlanetData(data);
+      changeActivePlanet(e.dataset.planet);
+    });
+  });
+});

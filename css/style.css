@@ -170,9 +170,11 @@ nav ul li:hover {
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.23rem;
-  border-bottom: 2px solid #fff;
   padding: 0 1rem;
   color: var(--light-color);
+}
+.active-planet{
+  border-bottom: 2px solid #fff;
 }
 .planet-name {
   font-family: var(--secondary-font);
