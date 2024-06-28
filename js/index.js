@@ -58,11 +58,11 @@ const planetDistance = document.querySelector(".planet-distance");
 const planetTravelTime = document.querySelector(".planet-travel-time");
 const planetList = document.querySelectorAll(".planet-list li");
 
-const getPlanetData = async (planet) => {
-  const response = await fetch(`data/destination.json`);
+const getData = async (file, index) => {
+  const response = await fetch(`data/${file}.json`);
   const data = await response.json();
   return data.destinations.find(
-    (item) => item.name.toLowerCase() === planet.toLowerCase()
+    (item) => item.index === Number.parseInt(index)
   );
 };
 
@@ -74,19 +74,19 @@ const insertPlanetData = (data) => {
   planetTravelTime.textContent = data.travelTime;
 };
 
-const changeActivePlanet = (name) => {
+const changeActiveList = (index, activeClass) => {
   planetList.forEach((e) => {
-    e.dataset.planet === name
-      ? e.classList.add("active-planet")
-      : e.classList.remove("active-planet");
+    e.dataset.index === index
+      ? e.classList.add(`${activeClass}`)
+      : e.classList.remove(`${activeClass}`);
   });
 };
 
 planetList.forEach((e) => {
   e.addEventListener("click", () => {
-    getPlanetData(e.dataset.planet).then((data) => {
+    getData("destination", e.dataset.index).then((data) => {
       insertPlanetData(data);
-      changeActivePlanet(e.dataset.planet);
+      changeActiveList(e.dataset.index, "active-planet");
     });
   });
 });
