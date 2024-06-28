@@ -52,7 +52,7 @@ navToggler.addEventListener("click", toggle);
 
 // Functions For Both destination and crew page
 
-let currentPage = window.location.pathname.split("/")[1].split(".")[0];
+let currentPage = window.location.pathname.split("/")[1].split(".")[0]; // EXtracting path from /path.html
 const data = [];
 
 const getData = async () => {
