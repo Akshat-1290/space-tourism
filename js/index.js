@@ -117,3 +117,14 @@ const activeClass =
 const insertFunction =
   currentPage === "destination" ? insertPlanetData : insertCrewData;
 attachEventHandler(activeList, activeClass, insertFunction);
+
+// Changing Crew Item After every 6 seconds
+
+let itemIndex = 2;
+
+const i = setInterval(() => {
+  const itemData = data.find((item) => item.index === itemIndex);
+  insertCrewData(itemData);
+  changeActiveList(itemIndex, activeClass, activeList);
+  itemIndex = itemIndex === 4 ? 1 : itemIndex + 1;
+}, 4000);
