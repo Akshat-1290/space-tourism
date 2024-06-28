@@ -8,9 +8,9 @@
         padding-left: 4rem;
     }
     nav ul{
+        display: flex;
         padding:0 4rem;
         position: static;
-        transform: scale(1);
         flex-direction: row;
         background:transparent;
         gap: 3rem;
@@ -41,6 +41,11 @@
     .explore-btn{
         width:24rem;
         height: 24rem;
+    }
+
+    /* Crew Page CSS  */
+    #crew-container{
+        margin-top: 2rem;
     }
 
 }

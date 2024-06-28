@@ -14,7 +14,7 @@
 
   /* Destination Page CSS  */
 
-  .dest-content {
+  .content {
     display: flex;
     justify-content: center;
     gap: clamp(10rem, 13vw, 25rem);
@@ -29,7 +29,33 @@
   hr {
     width: 100% !important;
   }
-  .planet-list li{
+  .planet-list li {
+    cursor: pointer;
+  }
+
+  /* Crew Page CSS  */
+  #crew-container {
+    position: relative;
+  }
+  .crew-visuals {
+    order: 2;
+  }
+  .crew-list {
+    order: 3;
+  }
+  .crew-content {
+    margin-top: 8rem;
+    align-items: center;
+  }
+  .crew-visuals h3 {
+    position: absolute;
+    top: -5.5rem;
+    left: 9vw;
+  }
+  .crew-image {
+    height: 40rem;
+  }
+  .crew-list li {
     cursor: pointer;
   }
 }
@@ -97,13 +123,13 @@
   .details {
     align-items: flex-start;
   }
-  .planet-name{
+  .planet-name {
     font-size: 10rem;
   }
   .desc {
     text-align: start;
     padding: 0;
-    font-size: 1.8rem;
+    font-size: 1.3vw;
     letter-spacing: 0.15rem;
   }
   .info {
@@ -113,5 +139,26 @@
   }
   .travel-time {
     margin: 0;
+  }
+
+  /* Crew Page CSS  */
+  .crew-content {
+    margin-top: 2rem;
+  }
+  .crew-visuals hr {
+    display: none;
+  }
+  .crew-image {
+    height: 80vh;
+  }
+  .position {
+    font-size: clamp(4rem , 3vw , 6rem);
+  }
+  .crew-name {
+    font-size: clamp(6rem , 4vw , 7rem);
+  }
+  .crew-visuals h3 {
+    top: -3.5rem;
+    left: 10vw;
   }
 }
