@@ -42,7 +42,7 @@ nav ul {
   gap: 2rem;
   background-color: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
-  transform: scale(0);
+  opacity: 0;
   transition: 0.5s;
 }
 nav ul li {
@@ -66,7 +66,7 @@ nav ul li:hover {
   border-bottom: 2px solid white;
 }
 .nav-link-active {
-  transform: scale(1);
+  opacity: 1;
 }
 
 /* Home Page CSS  */
