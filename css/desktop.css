@@ -53,10 +53,13 @@
     left: 9vw;
   }
   .crew-image {
-    height: 40rem;
+    height: 80vh;
   }
   .crew-list li {
     cursor: pointer;
+  }
+  .crew-visuals hr{
+    display: none;
   }
 }
 
@@ -145,11 +148,14 @@
   .crew-content {
     margin-top: 2rem;
   }
-  .crew-visuals hr {
-    display: none;
+  .crew-visuals{
+    width:22%;
+  }
+  .crew-details{
+    width: 39vw;
   }
   .crew-image {
-    height: 80vh;
+    margin: 0 auto;
   }
   .position {
     font-size: clamp(4rem , 3vw , 6rem);

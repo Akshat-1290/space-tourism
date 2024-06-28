@@ -47,5 +47,9 @@
     #crew-container{
         margin-top: 2rem;
     }
+    .crew-list li{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 
 }
