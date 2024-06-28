@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Tourism</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tablet.css" />
+    <link rel="stylesheet" href="css/desktop.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/favicon-32x32.png" />
+    <style>
+      @media only screen and (max-width: 768px) {
+        body {
+          background: url(assets/crew/background-crew-mobile.jpg);
+          background-size: cover;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        body {
+          background: url(assets/crew/background-crew-tablet.jpg);
+          background-size: cover;
+        }
+      }
+      @media only screen and (min-width: 1280px) {
+        body {
+          background: url(assets/crew/background-crew-desktop.jpg);
+          background-size: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="nav-container" data-activepage="crew"></header>
+    <section id="crew-container">
+      <div class="crew-content">
+        <div class="visuals crew-visuals">
+          <h3><span class="index">01</span> Pick Your crew</h3>
+          <img
+            src="assets/crew/image-douglas-hurley.webp"
+            alt="crew image"
+            class="crew-image"
+          />
+          <hr class="seperator" />
+        </div>
+        <div class="details crew-details">
+          <ul class="crew-list">
+            <li class="first active-crew" data-crewindex="1"></li>
+            <li class="second" data-crewindex="2"></li>
+            <li class="third" data-crewindex="3"></li>
+            <li class="fourth" data-crewindex="4"></li>
+          </ul>
+          <span class="position">Commander</span>
+          <h2 class="crew-name">Douglas Hurley</h2>
+          <p class="crew-desc desc">
+            See our planet as you’ve never seen it before. A perfect relaxing
+            trip away to help regain perspective and come back refreshed. While
+            you’re there, take in some history by visiting the Luna 2 and Apollo
+            11 landing sites."
+          </p>
+        </div>
+      </div>
+    </section>
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -42,7 +42,7 @@ nav ul {
   gap: 2rem;
   background-color: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
-  opacity: 0;
+  display: none;
   transition: 0.5s;
 }
 nav ul li {
@@ -66,7 +66,7 @@ nav ul li:hover {
   border-bottom: 2px solid white;
 }
 .nav-link-active {
-  opacity: 1;
+ display: flex;
 }
 
 /* Home Page CSS  */
@@ -132,28 +132,28 @@ nav ul li:hover {
   margin-top: 3rem;
   padding-bottom: 2rem;
 }
-.planet-visuals {
+.visuals {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
   font-family: var(--primary-font);
 }
-.planet-visuals h3 {
+.visuals h3 {
   color: white;
   font-size: clamp(1.5rem, 4vw, 2.2rem);
   font-weight: lighter;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
-.planet-visuals .index {
+.visuals .index {
   margin-right: 1rem;
   color: var(--light-color);
 }
 .planet-image {
   height: clamp(19rem , 40vw , 23rem);
 }
-.planet-details {
+.details {
   display: flex;
   gap: 2rem;
   flex-direction: column;
@@ -183,7 +183,7 @@ nav ul li:hover {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
-.planet-desc {
+.desc {
   max-width: 48rem;
   text-align: center;
   font-family: var(--primary-font);
@@ -195,7 +195,8 @@ nav ul li:hover {
 }
 .seperator {
   width: 80vw;
-  border-top: 1px solid #ffffff45;
+  border: 0;
+  border-top: 1px solid #ffffff80;
 }
 .planet-info {
   text-align: center;
@@ -215,4 +216,46 @@ nav ul li:hover {
 }
 .travel-time{
   margin-top: 2rem;
+}
+
+/* Crew Page CSS  */
+
+.crew-image{
+  height: 25rem;
+  margin-top: 2.5rem;
+}
+.crew-visuals{
+  gap: 0;
+}
+.crew-details{
+  font-family: var(--secondary-font);
+}
+.crew-list{
+  display: flex;
+  gap: 3rem;
+  list-style:none;
+  margin-top: 2rem;
+}
+.crew-list li{
+  padding: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 3rem;
+  background-color: rgba(255, 255, 255, 0.250);
+}
+.position{
+  color: var(--light-color);
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+.crew-name{
+color: white;
+font-size: 2.5rem;
+text-transform: uppercase;
+letter-spacing: 0.1rem;
+font-weight: lighter;
+}
+.active-crew{
+  background-color: white !important;
 }
