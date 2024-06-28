@@ -50,18 +50,34 @@ const toggle = () => {
 
 navToggler.addEventListener("click", toggle);
 
-// Data Functions For Both destination and crew page
-const getData = async (file, index) => {
-  const response = await fetch(`data/${file}.json`);
-  const data = await response.json();
-  return data.spacedata.find((item) => item.index === Number.parseInt(index));
-};
+// Functions For Both destination and crew page
 
-const changeActiveList = (index, activeClass , list) => {
+let currentPage = window.location.pathname.split("/")[1].split(".")[0];
+const data = [];
+
+const getData = async () => {
+  const response = await fetch(`data/spaceData.json`);
+  const fetchedData = await response.json();
+  data.push(...fetchedData[`${currentPage}`]);
+};
+getData();
+
+const changeActiveList = (index, activeClass, list) => {
   list.forEach((e) => {
-    e.dataset.index === index
+    Number.parseInt(e.dataset.index) === index
       ? e.classList.add(`${activeClass}`)
       : e.classList.remove(`${activeClass}`);
+  });
+};
+
+const attachEventHandler = (list, activeClass, insertFunction) => {
+  list.forEach((e) => {
+    e.addEventListener("click", () => {
+      const index = Number.parseInt(e.dataset.index);
+      const filteredData = data.find((item) => item.index === index);
+      insertFunction(filteredData);
+      changeActiveList(index, activeClass, list);
+    });
   });
 };
 
@@ -71,7 +87,6 @@ const planetName = document.querySelector(".planet-name");
 const planetDesc = document.querySelector(".planet-desc");
 const planetDistance = document.querySelector(".planet-distance");
 const planetTravelTime = document.querySelector(".planet-travel-time");
-const planetList = document.querySelectorAll(".planet-list li");
 
 const insertPlanetData = (data) => {
   planetImage.src = data.image;
@@ -81,22 +96,12 @@ const insertPlanetData = (data) => {
   planetTravelTime.textContent = data.travelTime;
 };
 
-planetList.forEach((e) => {
-  e.addEventListener("click", () => {
-    getData("destination", e.dataset.index).then((data) => {
-      insertPlanetData(data);
-      changeActiveList(e.dataset.index, "active-planet" , planetList);
-    });
-  });
-});
-
 // Crew Page JS
 
 const crewImage = document.querySelector(".crew-image");
 const crewPosition = document.querySelector(".position");
 const crewName = document.querySelector(".crew-name");
 const crewDesc = document.querySelector(".crew-desc");
-const crewList = document.querySelectorAll(".crew-list li");
 
 const insertCrewData = (data) => {
   crewImage.src = data.image;
@@ -105,11 +110,10 @@ const insertCrewData = (data) => {
   crewDesc.textContent = data.description;
 };
 
-crewList.forEach((e) => {
-  e.addEventListener("click", () => {
-    getData("crew", e.dataset.index).then((data) => {
-      insertCrewData(data);
-      changeActiveList(e.dataset.index, "active-crew" , crewList);
-    });
-  });
-});
+// Attaching Event Listener
+const activeList = document.querySelectorAll(`.${currentPage}-list li`);
+const activeClass =
+  currentPage === "destination" ? "active-planet" : "active-crew";
+const insertFunction =
+  currentPage === "destination" ? insertPlanetData : insertCrewData;
+attachEventHandler(activeList, activeClass, insertFunction);
