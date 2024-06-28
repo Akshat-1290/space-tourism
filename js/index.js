@@ -88,12 +88,18 @@ const planetDesc = document.querySelector(".planet-desc");
 const planetDistance = document.querySelector(".planet-distance");
 const planetTravelTime = document.querySelector(".planet-travel-time");
 
-const insertPlanetData = (data) => {
-  planetImage.src = data.image;
-  planetName.textContent = data.name;
-  planetDesc.textContent = data.description;
-  planetDistance.textContent = data.distance;
-  planetTravelTime.textContent = data.travelTime;
+const insertPlanetData = ({
+  image,
+  name,
+  description,
+  distance,
+  travelTime,
+}) => {
+  planetImage.src = image;
+  planetName.textContent = name;
+  planetDesc.textContent = description;
+  planetDistance.textContent = distance;
+  planetTravelTime.textContent = travelTime;
 };
 
 // Crew Page JS
@@ -103,11 +109,11 @@ const crewPosition = document.querySelector(".position");
 const crewName = document.querySelector(".crew-name");
 const crewDesc = document.querySelector(".crew-desc");
 
-const insertCrewData = (data) => {
-  crewImage.src = data.image;
-  crewPosition.textContent = data.position;
-  crewName.textContent = data.name;
-  crewDesc.textContent = data.description;
+const insertCrewData = ({ image, position, name, description }) => {
+  crewImage.src = image;
+  crewPosition.textContent = position;
+  crewName.textContent = name;
+  crewDesc.textContent = description;
 };
 
 // Attaching Event Listener
