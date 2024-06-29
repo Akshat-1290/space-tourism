@@ -1,5 +1,5 @@
-
 // Functions For Both destination and crew page
+
 let currentPage = window.location.pathname.split("/")[1].split(".")[0]; // EXtracting path from /path.html
 const data = [];
 
@@ -8,12 +8,12 @@ const getData = async () => {
   const fetchedData = await response.json();
   data.push(...fetchedData[`${currentPage}`]);
 };
-
+getData();
 const changeActiveList = (index, activeClass, list) => {
   list.forEach((e) => {
     Number.parseInt(e.dataset.index) === index
-    ? e.classList.add(`${activeClass}`)
-    : e.classList.remove(`${activeClass}`);
+      ? e.classList.add(`${activeClass}`)
+      : e.classList.remove(`${activeClass}`);
   });
 };
 
@@ -34,7 +34,6 @@ const planetName = document.querySelector(".planet-name");
 const planetDesc = document.querySelector(".planet-desc");
 const planetDistance = document.querySelector(".planet-distance");
 const planetTravelTime = document.querySelector(".planet-travel-time");
-
 const insertPlanetData = ({
   image,
   name,
