@@ -259,3 +259,51 @@ nav ul li:hover {
 .active-crew {
   background-color: white !important;
 }
+
+/* Tech Page CSS  */
+#tech-container {
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+}
+.portrait {
+  display: none;
+}
+.landscape {
+  width: 100%;
+}
+.tech-details {
+  color: white;
+  font-family: var(--primary-font);
+}
+.tech-list{
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  margin-top: 2rem;
+}
+.tech-details li {
+  list-style: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 3rem;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.9rem;
+}
+.tech-text{
+  margin-top: 1rem;
+  color: var(--light-color);
+letter-spacing: 0.2rem;
+font-size: 1.5rem;
+text-transform: uppercase;
+}
+
+.tech-name{
+  font-family: var(--secondary-font);
+  font-weight: lighter;
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
