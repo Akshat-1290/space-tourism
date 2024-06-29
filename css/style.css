@@ -275,7 +275,7 @@ nav ul li:hover {
   color: white;
   font-family: var(--primary-font);
 }
-.tech-list{
+.tech-list {
   display: flex;
   gap: 3rem;
   list-style: none;
@@ -292,18 +292,28 @@ nav ul li:hover {
   align-items: center;
   font-size: 1.9rem;
 }
-.tech-text{
+.tech-text {
   margin-top: 1rem;
   color: var(--light-color);
-letter-spacing: 0.2rem;
-font-size: 1.5rem;
-text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: clamp(1.5rem , 3vw , 2rem);
+  text-transform: uppercase;
 }
 
-.tech-name{
+.tech-name {
   font-family: var(--secondary-font);
   font-weight: lighter;
-  font-size: 2.5rem;
+  font-size: clamp(2rem , 5vw , 3.5rem);
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+}
+.tech-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.active-tech{
+  background-color: white;
+  color: black;
 }

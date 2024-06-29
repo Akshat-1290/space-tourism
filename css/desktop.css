@@ -58,8 +58,54 @@
   .crew-list li {
     cursor: pointer;
   }
-  .crew-visuals hr{
+  .crew-visuals hr {
     display: none;
+  }
+
+  /* Tech Page CSS  */
+#tech-container{
+  position: relative;
+}
+  .portrait {
+    display: block;
+    width: 35rem;
+  }
+  .landscape {
+    display: none;
+  }
+  .tech-visuals {
+    order: 2;
+  }
+  .tech-details {
+    flex-direction: row;
+  }
+  .tech-list {
+    flex-direction: column;
+    margin-right: 4rem;
+  }
+  .tech-list li {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+  .tech-content {
+    gap: clamp(8rem, 8vw, 25rem);
+  }
+  .tech-info {
+    align-items: flex-start;
+  }
+  .tech-desc {
+    text-align: start;
+    padding: 0;
+    max-width: 30rem;
+    letter-spacing: 0.1rem;
+  }
+  .tech-visuals h3 {
+    position: absolute;
+    top: -2rem;
+    left: 9vw;
   }
 }
 
@@ -148,23 +194,55 @@
   .crew-content {
     margin-top: 2rem;
   }
-  .crew-visuals{
-    width:22%;
+  .crew-visuals {
+    width: 22%;
   }
-  .crew-details{
+  .crew-details {
     width: 39vw;
   }
   .crew-image {
     margin: 0 auto;
   }
   .position {
-    font-size: clamp(4rem , 3vw , 6rem);
+    font-size: clamp(4rem, 3vw, 6rem);
   }
   .crew-name {
-    font-size: clamp(6rem , 4vw , 7rem);
+    font-size: clamp(6rem, 4vw, 7rem);
   }
   .crew-visuals h3 {
     top: -3.5rem;
     left: 10vw;
+  }
+
+  /* Tech Page CSS  */
+  #tech-container{
+    margin-top: 8rem;
+  }
+  .tech-content{
+    align-items: center;
+    gap: clamp(10rem, 11vw, 25rem);
+  }
+  .tech-visuals h3 {
+    top: -6.5rem;
+    left: 12vw;
+  }
+  .tech-image{
+    width: auto;
+    height: 80vh;
+  }
+  .tech-list li{
+    width: 9rem;
+    height: 9rem;
+    font-size: 3.5rem;
+  }
+  .tech-text{
+    font-size: 2.2rem;
+  }
+  .tech-name{
+    font-size: 4.5rem;
+  }
+  .tech-desc{
+    max-width: clamp(42rem, 30vw, 65rem);
+    letter-spacing: 0.1rem;
   }
 }
