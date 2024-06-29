@@ -1,6 +1,7 @@
 // Functions For Both destination and crew page
+let pathname =  window.location.pathname.split("/");
+let currentPage = pathname[pathname.length - 1].split(".")[0]  // EXtracting path from /space-tourism/path.html
 
-let currentPage = window.location.pathname.split("/")[1].split(".")[0]; // EXtracting path from /path.html
 const data = [];
 
 const getData = async () => {
