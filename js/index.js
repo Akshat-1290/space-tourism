@@ -60,13 +60,13 @@ const getData = async () => {
   const fetchedData = await response.json();
   data.push(...fetchedData[`${currentPage}`]);
 };
-getData();
+currentPage !== "index" ? getData() : null
 
 const changeActiveList = (index, activeClass, list) => {
   list.forEach((e) => {
     Number.parseInt(e.dataset.index) === index
-      ? e.classList.add(`${activeClass}`)
-      : e.classList.remove(`${activeClass}`);
+    ? e.classList.add(`${activeClass}`)
+    : e.classList.remove(`${activeClass}`);
   });
 };
 
@@ -116,21 +116,49 @@ const insertCrewData = ({ image, position, name, description }) => {
   crewDesc.textContent = description;
 };
 
-// Attaching Event Listener
-const activeList = document.querySelectorAll(`.${currentPage}-list li`);
-const activeClass =
-  currentPage === "destination" ? "active-planet" : "active-crew";
-const insertFunction =
-  currentPage === "destination" ? insertPlanetData : insertCrewData;
-attachEventHandler(activeList, activeClass, insertFunction);
-
 // Changing Crew Item After every 6 seconds
 
 let itemIndex = 2;
 
-const i = setInterval(() => {
+const crewCarousel = setInterval(() => {
   const itemData = data.find((item) => item.index === itemIndex);
   insertCrewData(itemData);
   changeActiveList(itemIndex, activeClass, activeList);
   itemIndex = itemIndex === 4 ? 1 : itemIndex + 1;
 }, 4000);
+
+currentPage !== "crew" ? clearInterval(crewCarousel) : null;
+
+// Tech Page JS
+
+const techName = document.querySelector(".tech-name");
+const techDesc = document.querySelector(".tech-desc");
+const techImagePortrait = document.querySelector(".portrait");
+const techImageLandscape = document.querySelector(".landscape");
+
+const insertTechData = ({ imagePortrait, imageLandscape, name, desc }) => {
+  techImagePortrait.src = imagePortrait;
+  techImageLandscape.src = imageLandscape;
+  techName.textContent = name;
+  techDesc.textContent = desc;
+};
+
+// Attaching Event Listener
+const activeList = document.querySelectorAll(`.${currentPage}-list li`);
+let activeClass = "";
+let insertFunction;
+switch (currentPage) {
+  case "destination":
+    activeClass = "active-planet";
+    insertFunction = insertPlanetData;
+    break;
+  case "crew":
+    activeClass = "active-crew";
+    insertFunction = insertCrewData;
+    break;
+  case "technology":
+    activeClass = "active-tech";
+    insertFunction = insertTechData;
+    break;
+}
+attachEventHandler(activeList, activeClass, insertFunction);
