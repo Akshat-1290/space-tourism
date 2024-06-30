@@ -1,6 +1,6 @@
 // Functions For Both destination and crew page
-let pathname =  window.location.pathname.split("/");
-let currentPage = pathname[pathname.length - 1].split(".")[0]  // EXtracting path from /space-tourism/path.html
+let pathname = window.location.pathname.split("/");
+let currentPage = pathname[pathname.length - 1].split(".")[0]; // EXtracting path from /space-tourism/path.html
 
 const data = [];
 
@@ -72,7 +72,7 @@ const crewCarousel = setInterval(() => {
   insertCrewData(itemData);
   changeActiveList(itemIndex, activeClass, activeList);
   itemIndex = itemIndex === 4 ? 1 : itemIndex + 1;
-}, 4000);
+}, 6000);
 
 currentPage !== "crew" ? clearInterval(crewCarousel) : null;
 
