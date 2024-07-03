@@ -1,6 +1,8 @@
 // Functions For Both destination and crew page
-let pathname = window.location.pathname.split("/");
-let currentPage = pathname[pathname.length - 1].split(".")[0]; // EXtracting path from /space-tourism/path.html
+let pathname = window.location.pathname;
+
+// Regex pattern to extract the page name
+let currentPage = pathname.match(/\/([^\/]+)\.html?$/)[1];
 
 const data = [];
 
